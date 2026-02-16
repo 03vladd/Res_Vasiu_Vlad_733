@@ -1,13 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import Model.*;
+import Repository.ShopRepository;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        ShopRepository repository = new ShopRepository();
+
+        var customers = repository.loadCustomers("data/customers.json");
+        var events = repository.loadEvents("data/events.json");
+        var refunds = repository.loadRefunds("data/refunds.json");
+
+        System.out.println("Customers loaded: " + customers.size());
+        System.out.println("Events loaded: " + events.size());
+        System.out.println("Refunds loaded: " + refunds.size());
+
+        System.out.println("\n--- Customers ---");
+        for (var c : customers) {
+            System.out.println(c.getId() + " | " + c.getName() + " | " + c.getTier() + " | " + c.getStatus() + " | " + c.getLoyaltyLevel());
+        }
+
+        System.out.println("\n--- Events (first 5) ---");
+        for (int i = 0; i < 5; i++) {
+            var e = events.get(i);
+            System.out.println(e.getId() + " | customerId=" + e.getCustomerId() + " | day=" + e.getDay() + " | " + e.getType() + " | points=" + e.getPoints());
+        }
+
+        System.out.println("\n--- Refunds (first 5) ---");
+        for (int i = 0; i < 5; i++) {
+            var r = refunds.get(i);
+            System.out.println(r.getId() + " | customerId=" + r.getCustomerid() + " | " + r.getReason() + " | amount=" + r.getAmount());
+        }
     }
 }
