@@ -55,4 +55,9 @@ public class Customer {
         this.loyaltyLevel = loyaltyLevel;
     }
 
+    @Override
+    public String toString() {
+        return "[" + id + "] " + name + " | " + tier + " | " + status + " | loyalty=" + loyaltyLevel;
+    }
+
 }
