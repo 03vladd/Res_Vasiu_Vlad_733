@@ -78,5 +78,23 @@ public class ShopService {
 
     }
 
+    public List<String> getEventCountReport() {
+        Map<OrderEventType, Long> counts = events.stream()
+                .collect(Collectors.groupingBy(OrderEvent::getType, Collectors.counting()));
+
+        // Sort descending by count
+        List<Map.Entry<OrderEventType, Long>> sorted = counts.entrySet().stream()
+                .sorted(Map.Entry.<OrderEventType, Long>comparingByValue().reversed())
+                .collect(Collectors.toList());
+
+        List<String> result = new ArrayList<>();
+        for (Map.Entry<OrderEventType, Long> entry : sorted) {
+            result.add(entry.getKey() + " -> " + entry.getValue());
+        }
+        return result;
+    }
+
+
+
 
 }

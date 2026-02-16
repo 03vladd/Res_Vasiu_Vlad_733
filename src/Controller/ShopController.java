@@ -67,6 +67,10 @@ public class ShopController {
         for (String line : rankingLines) {
             System.out.println(line);
         }
+
+        //7. final report for shop
+        List<String> reportLines = service.getEventCountReport();
+        repository.writeLinesToFile("shop_report.txt", reportLines);
     }
 
 
