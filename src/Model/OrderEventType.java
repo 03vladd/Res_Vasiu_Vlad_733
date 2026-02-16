@@ -4,6 +4,6 @@ public enum OrderEventType {
     PLACED,
     PAID,
     SHIPPED,
-    CANCELLED,
+    CANCELED,
     RETURNED
 }
