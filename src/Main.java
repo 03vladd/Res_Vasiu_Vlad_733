@@ -15,21 +15,8 @@ public class Main {
         System.out.println("Events loaded: " + events.size());
         System.out.println("Refunds loaded: " + refunds.size());
 
-        System.out.println("\n--- Customers ---");
         for (var c : customers) {
-            System.out.println(c.getId() + " | " + c.getName() + " | " + c.getTier() + " | " + c.getStatus() + " | " + c.getLoyaltyLevel());
-        }
-
-        System.out.println("\n--- Events (first 5) ---");
-        for (int i = 0; i < 5; i++) {
-            var e = events.get(i);
-            System.out.println(e.getId() + " | customerId=" + e.getCustomerId() + " | day=" + e.getDay() + " | " + e.getType() + " | points=" + e.getPoints());
-        }
-
-        System.out.println("\n--- Refunds (first 5) ---");
-        for (int i = 0; i < 5; i++) {
-            var r = refunds.get(i);
-            System.out.println(r.getId() + " | customerId=" + r.getCustomerid() + " | " + r.getReason() + " | amount=" + r.getAmount());
+            System.out.println(c);
         }
     }
 }
