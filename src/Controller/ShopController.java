@@ -61,6 +61,13 @@ public class ShopController {
         for (String line : computedLines) {
             System.out.println(line);
         }
+
+        //6. totalscore for customer and top 5
+        List<String> rankingLines = service.computeTop5Ranking();
+        for (String line : rankingLines) {
+            System.out.println(line);
+        }
     }
+
 
 }

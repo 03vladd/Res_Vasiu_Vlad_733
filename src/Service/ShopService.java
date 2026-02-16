@@ -40,5 +40,43 @@ public class ShopService {
         return result;
     }
 
+    public List<String> computeTop5Ranking() {
+        //total score per customer
+        Map<Integer, Integer> eventScores = new HashMap<>();
+        for (OrderEvent e : events) {
+            eventScores.merge(e.getCustomerId(), e.computePoints(), Integer::sum);
+        }
+
+        //total refund amount per customer
+        Map<Integer, Integer> refundAmounts = new HashMap<>();
+        for (Refund r : refunds) {
+            refundAmounts.merge(r.getCustomerid(), r.getAmount(), Integer::sum);
+        }
+
+        //combine for final calculation
+        List<Map.Entry<Customer, Integer>> ranking = new ArrayList<>();
+        for (Customer c : customers) {
+            int total = eventScores.getOrDefault(c.getId(), 0)
+                    - refundAmounts.getOrDefault(c.getId(), 0);
+            ranking.add(Map.entry(c, total));
+        }
+
+        //sort absteigend by totalscore and if equal aufsteigend after name
+        ranking.sort(
+                Comparator.<Map.Entry<Customer, Integer>, Integer>comparing(Map.Entry::getValue).reversed()
+                        .thenComparing(e -> e.getKey().getName())
+        );
+
+        //final result
+        List<String> result = new ArrayList<>();
+        result.add("Top 5 Customers:");
+        for (int i = 0; i < 5 && i < ranking.size(); i++) {
+            Map.Entry<Customer, Integer> entry = ranking.get(i);
+            result.add((i + 1) + ". " + entry.getKey().getName() + " -> " + entry.getValue());
+        }
+        return result;
+
+    }
+
 
 }
