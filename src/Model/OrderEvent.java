@@ -54,4 +54,15 @@ public class OrderEvent {
     public void setPoints(int points) {
         this.points = points;
     }
+
+    // point calculation rules for ex.5
+    public int computePoints() {
+        return switch (type) {
+            case PLACED -> points + 1;
+            case PAID -> points + 2 * (day % 5);
+            case SHIPPED -> points + 3;
+            case CANCELED -> points - 5 - (day % 3);
+            case RETURNED -> points - 10;
+        };
+    }
 }

@@ -55,6 +55,12 @@ public class ShopController {
             reversedLines.add(sorted.get(i).toString());
         }
         repository.writeLinesToFile("customers_sorted.txt", reversedLines);
+
+        //5. computed the point totals for the first 5 events
+        List<String> computedLines = service.computeFirst5Events();
+        for (String line : computedLines) {
+            System.out.println(line);
+        }
     }
 
 }

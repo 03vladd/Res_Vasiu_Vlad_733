@@ -28,4 +28,17 @@ public class ShopService {
                         .thenComparing(Customer::getName))
                 .collect(Collectors.toList());
     }
+
+    public List<String> computeFirst5Events() {
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < 5 && i < events.size(); i++) {
+            OrderEvent e = events.get(i);
+            result.add("Event " + e.getId()
+                    + " -> raw=" + e.getPoints()
+                    + " -> computed=" + e.computePoints());
+        }
+        return result;
+    }
+
+
 }
