@@ -21,4 +21,11 @@ public class ShopService {
                 .filter(c -> c.getTier().equals(tier) && c.getStatus() == CustomerStatus.ACTIVE)
                 .collect(Collectors.toList());
     }
+
+    public List<Customer> sortCustomers() {
+        return customers.stream()
+                .sorted(Comparator.comparingInt(Customer::getLoyaltyLevel).reversed()
+                        .thenComparing(Customer::getName))
+                .collect(Collectors.toList());
+    }
 }

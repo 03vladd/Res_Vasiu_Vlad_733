@@ -31,6 +31,7 @@ public class ShopController {
             System.out.println(c);
         }
 
+        //2. filter nach status und tier
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input tier: ");
         String tier = scanner.nextLine();
@@ -41,5 +42,11 @@ public class ShopController {
         }
 
         scanner.close();
+        //3. sort nach loyaltyLevel and name
+        List<Customer> sorted = service.sortCustomers();
+        for (Customer c : sorted) {
+            System.out.println(c);
+        }
     }
+
 }
