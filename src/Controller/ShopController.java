@@ -42,11 +42,19 @@ public class ShopController {
         }
 
         scanner.close();
+
         //3. sort nach loyaltyLevel and name
         List<Customer> sorted = service.sortCustomers();
         for (Customer c : sorted) {
             System.out.println(c);
         }
+
+        //.4 reverse order from 3 and save in txt file
+        List<String> reversedLines = new ArrayList<>();
+        for (int i = sorted.size() - 1; i >= 0; i--) {
+            reversedLines.add(sorted.get(i).toString());
+        }
+        repository.writeLinesToFile("customers_sorted.txt", reversedLines);
     }
 
 }

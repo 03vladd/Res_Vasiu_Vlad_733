@@ -1,0 +1,15 @@
+[9] Ioana Ene | BRONZE | ACTIVE | loyalty=4
+[13] Mihai Pascu | GOLD | ACTIVE | loyalty=5
+[6] Florina Ilie | BRONZE | ACTIVE | loyalty=5
+[10] Janina Tudor | GOLD | ACTIVE | loyalty=6
+[5] Emanuel Rusu | SILVER | ACTIVE | loyalty=6
+[3] Cezar Popa | BRONZE | BANNED | loyalty=6
+[14] Nadia Dumitru | SILVER | ACTIVE | loyalty=7
+[12] Larisa Matei | BRONZE | ACTIVE | loyalty=7
+[8] Horia Dobre | SILVER | BANNED | loyalty=7
+[4] Daria Stan | GOLD | ACTIVE | loyalty=7
+[15] Ovidiu Ionescu | BRONZE | ACTIVE | loyalty=8
+[7] Gabi Voicu | GOLD | ACTIVE | loyalty=8
+[2] Bianca Marinescu | SILVER | ACTIVE | loyalty=8
+[11] Klaus Neagu | SILVER | ACTIVE | loyalty=9
+[1] Andrei Iordache | GOLD | ACTIVE | loyalty=9
