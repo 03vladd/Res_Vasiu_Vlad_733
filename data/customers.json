@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Andrei Iordache",
+    "tier": "GOLD",
+    "status": "ACTIVE",
+    "loyaltyLevel": 9
+  },
+  {
+    "id": 2,
+    "name": "Bianca Marinescu",
+    "tier": "SILVER",
+    "status": "ACTIVE",
+    "loyaltyLevel": 8
+  },
+  {
+    "id": 3,
+    "name": "Cezar Popa",
+    "tier": "BRONZE",
+    "status": "BANNED",
+    "loyaltyLevel": 6
+  },
+  {
+    "id": 4,
+    "name": "Daria Stan",
+    "tier": "GOLD",
+    "status": "ACTIVE",
+    "loyaltyLevel": 7
+  },
+  {
+    "id": 5,
+    "name": "Emanuel Rusu",
+    "tier": "SILVER",
+    "status": "ACTIVE",
+    "loyaltyLevel": 6
+  },
+  {
+    "id": 6,
+    "name": "Florina Ilie",
+    "tier": "BRONZE",
+    "status": "ACTIVE",
+    "loyaltyLevel": 5
+  },
+  {
+    "id": 7,
+    "name": "Gabi Voicu",
+    "tier": "GOLD",
+    "status": "ACTIVE",
+    "loyaltyLevel": 8
+  },
+  {
+    "id": 8,
+    "name": "Horia Dobre",
+    "tier": "SILVER",
+    "status": "BANNED",
+    "loyaltyLevel": 7
+  },
+  {
+    "id": 9,
+    "name": "Ioana Ene",
+    "tier": "BRONZE",
+    "status": "ACTIVE",
+    "loyaltyLevel": 4
+  },
+  {
+    "id": 10,
+    "name": "Janina Tudor",
+    "tier": "GOLD",
+    "status": "ACTIVE",
+    "loyaltyLevel": 6
+  },
+  {
+    "id": 11,
+    "name": "Klaus Neagu",
+    "tier": "SILVER",
+    "status": "ACTIVE",
+    "loyaltyLevel": 9
+  },
+  {
+    "id": 12,
+    "name": "Larisa Matei",
+    "tier": "BRONZE",
+    "status": "ACTIVE",
+    "loyaltyLevel": 7
+  },
+  {
+    "id": 13,
+    "name": "Mihai Pascu",
+    "tier": "GOLD",
+    "status": "ACTIVE",
+    "loyaltyLevel": 5
+  },
+  {
+    "id": 14,
+    "name": "Nadia Dumitru",
+    "tier": "SILVER",
+    "status": "ACTIVE",
+    "loyaltyLevel": 7
+  },
+  {
+    "id": 15,
+    "name": "Ovidiu Ionescu",
+    "tier": "BRONZE",
+    "status": "ACTIVE",
+    "loyaltyLevel": 8
+  }
+]
